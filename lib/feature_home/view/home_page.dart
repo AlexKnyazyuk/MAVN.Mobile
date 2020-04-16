@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:lykke_mobile_mavn/app/resources/app_theme.dart';
 import 'package:lykke_mobile_mavn/app/resources/localized_strings.dart';
 import 'package:lykke_mobile_mavn/app/resources/svg_assets.dart';
@@ -106,7 +105,6 @@ class HomePage extends HookWidget {
       return Scaffold(
           backgroundColor: theme.appBackground,
           appBar: AppBar(
-            title: SvgPicture.asset(SvgAssets.appDarkLogo),
             backgroundColor: theme.appBarBackground,
             elevation: 0,
             actions: <Widget>[

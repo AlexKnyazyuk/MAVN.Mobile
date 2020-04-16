@@ -56,7 +56,7 @@ class AvailableAndStakedBalanceWidget extends StatelessWidget {
                 children: <Widget>[
                   const SizedBox(width: 2),
                   const ScaledDownSvg(
-                    asset: SvgAssets.tokenLight,
+                    asset: SvgAssets.token,
                     color: ColorStyles.primaryDark,
                   ),
                   const SizedBox(width: 4),
