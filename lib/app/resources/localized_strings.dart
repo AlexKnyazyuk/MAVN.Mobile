@@ -78,8 +78,7 @@ class LocalizedStrings {
 
 //region Common API errors
   static String get networkErrorTitle =>
-      Intl.message('Let\'s sort this connection problem out',
-          name: 'networkErrorTitle');
+      Intl.message('Internet connection problem', name: 'networkErrorTitle');
 
   static String get networkError => Intl.message(
       'It seems you\'re not connected to the internet. '
@@ -108,8 +107,8 @@ class LocalizedStrings {
           name: 'somethingIsNotRightError');
 
   static String get couldNotLoadBalanceError => Intl.message(
-      'We are unable to make transactions at this point as we '
-      'could not load your balance',
+      // ignore: lines_longer_than_80_chars
+      'We are unable to make transactions at this point as we could not retrieve your balance. Please try again.',
       name: 'couldNotLoadBalanceError');
 
 // endregion Common API errors
@@ -117,8 +116,8 @@ class LocalizedStrings {
 // region Customer API errors
 
   static String get referralLeadAlreadyExistError => Intl.message(
-      'Looks like this lovely person is already in our system, '
-      'try referring someone else',
+      // ignore: lines_longer_than_80_chars
+      'Looks like this lovely person is already in our system, try referring someone else!',
       name: 'referralLeadAlreadyExistError');
 
   static String get referralLeadAlreadyConfirmedError => Intl.message(
@@ -137,7 +136,7 @@ class LocalizedStrings {
       );
 
   static String get noVouchersInStockError =>
-      Intl.message('Sorry, there are no vouchers in stock',
+      Intl.message('Sorry, all vouchers are sold out',
           name: 'noVouchersInStockError');
 
 // endregion Customer API errors
@@ -480,7 +479,7 @@ class LocalizedStrings {
       Intl.message('Get started', name: 'getStartedButton');
 
   static String get transferTokensButton =>
-      Intl.message('Transfer tokens', name: 'transferTokensButton');
+      Intl.message('Send points', name: 'transferTokensButton');
 
 //endregion Common button labels
 
@@ -502,29 +501,28 @@ class LocalizedStrings {
       );
 
   static String onboardingPage2Title(String token) => Intl.message(
-        'Start earning $token tokens',
+        'Start earning $token points',
         name: 'onboardingPage2Title',
         args: [token],
       );
 
   static String onboardingPage2Details(String token, String company) =>
       Intl.message(
-        'Earn $token tokens by referring friends to $company properties, '
-        'hotels, restaurants and much more',
+        'Earn $token points by referring friends to $company and much more',
         name: 'onboardingPage2Details',
         args: [token, company],
       );
 
   static String onboardingPage3Title(String token) => Intl.message(
-        'Use $token tokens easily',
+        'Use $token points easily',
         name: 'onboardingPage3Title',
         args: [token],
       );
 
   static String onboardingPage3Details(String token, String company) =>
       Intl.message(
-        'Use your $token tokens on $company property invoices, '
-        'hotel stays, restaurants and much more',
+        // ignore: lines_longer_than_80_chars
+        'Use your $token points on $company for invoices, hotel stays, restaurants and much more',
         name: 'onboardingPage3Details',
         args: [token, company],
       );
@@ -684,7 +682,7 @@ class LocalizedStrings {
 
   static String phoneNumberVerificationResendCodeTimer(String timeLeft) =>
       Intl.message(
-        'Resend code in $timeLeft if it doesn’t arrive or expires',
+        'Resend code in $timeLeft',
         name: 'phoneNumberVerificationResendCodeTimer',
         args: [timeLeft],
         examples: const {'timeLeft': '00:50'},
@@ -766,7 +764,7 @@ class LocalizedStrings {
       );
 
   static String get monthlyChallengesSubtitle => Intl.message(
-        'Test yourself and earn tokens',
+        'Test yourself and earn points',
         name: 'monthlyChallengesSubtitle',
       );
 
@@ -807,7 +805,7 @@ class LocalizedStrings {
 // region Wallet Page
 
   static String get walletPageMyTotalTokens => Intl.message(
-        'My total tokens',
+        'My total points',
         name: 'walletPageMyTotalTokens',
       );
 
@@ -844,19 +842,19 @@ class LocalizedStrings {
       );
 
   static String walletPageSendButtonSubtitle(String token) => Intl.message(
-        'Transfer $token tokens to anyone',
+        'Send $token points to anyone',
         name: 'walletPageSendButtonSubtitle',
         args: [token],
       );
 
   static String walletPageReceiveButtonTitle(String token) => Intl.message(
-        'Receive $token tokens',
+        'Receive $token points',
         name: 'walletPageReceiveButtonTitle',
         args: [token],
       );
 
   static String walletPageReceiveButtonSubtitle(String token) => Intl.message(
-        'Receive tokens from other $token users',
+        'Receive points from other $token users',
         name: 'walletPageReceiveButtonSubtitle',
         args: [token],
       );
@@ -902,14 +900,14 @@ class LocalizedStrings {
 
   static String walletPageTransactionHistorySentType(String token) =>
       Intl.message(
-        'Sent $token tokens',
+        'Sent $token points',
         name: 'walletPageTransactionHistorySentType',
         args: [token],
       );
 
   static String walletPageTransactionHistoryReceivedType(String token) =>
       Intl.message(
-        'Received $token tokens',
+        'Received $token points',
         name: 'walletPageTransactionHistoryReceivedType',
         args: [token],
       );
@@ -1076,7 +1074,7 @@ class LocalizedStrings {
           String token, String company) =>
       Intl.message(
         // ignore: lines_longer_than_80_chars
-        'Thanks for accepting the referral, the next time you stay at $company hotel you will be awarded with $token tokens',
+        'Thanks for accepting the referral, the next time you stay at $company hotel you will be awarded with $token points',
         name: 'hotelReferralAcceptedSuccessBody', args: [token, company],
       );
 
@@ -1159,13 +1157,13 @@ class LocalizedStrings {
 //region P2P Transaction Page
 
   static String transactionFormPageTitle(String token) => Intl.message(
-        'Transfer $token tokens',
+        'Transfer $token points',
         name: 'transactionFormPageTitle',
         args: [token],
       );
 
   static String transactionFormPageSubDetails(String token) => Intl.message(
-        'Transfer $token tokens easily, scan the receivers QR'
+        'Transfer $token points easily, scan the receivers QR'
         ' code or enter their email address',
         name: 'transactionFormPageSubDetails',
         args: [token],
@@ -1199,13 +1197,13 @@ class LocalizedStrings {
       );
 
   static String transactionAmountTokensLabel(String token) => Intl.message(
-        'Amount ($token tokens)',
+        'Amount ($token points)',
         args: [token],
         name: 'transactionAmountTokensLabel',
       );
 
   static String get transactionAmountOfTokensHint => Intl.message(
-        'How many tokens are required?',
+        'How many points are required?',
         name: 'transactionAmountOfTokensHint',
       );
 
@@ -1229,8 +1227,7 @@ class LocalizedStrings {
       );
 
   static String get transactionAmountGreaterThanBalanceError => Intl.message(
-        'Hey big spender, it looks  as though your balance '
-        'is too low for this transaction. Please try again.',
+        'Your balance is too low for this transaction.',
         name: 'transactionAmountGreaterThanBalanceError',
       );
 
@@ -1266,7 +1263,7 @@ class LocalizedStrings {
   //region Wallet linking
 
   static String get insufficientFunds => Intl.message(
-        'You have unsufficient funds to link to an external wallet',
+        'You have insufficient funds to link to an external wallet',
         name: 'insufficientFunds',
       );
 
@@ -1296,7 +1293,7 @@ class LocalizedStrings {
       );
 
   static String get linkSimpleWalletInstructionPasteLink => Intl.message(
-        'Press link wallet',
+        'Press "link wallet"',
         name: 'linkSimpleWalletInstructionPasteLink',
       );
 
@@ -1311,7 +1308,7 @@ class LocalizedStrings {
       );
 
   static String get linkWalletInstructionFees => Intl.message(
-        'Linking wallet has associated fees',
+        'Linking external wallets has associated fees',
         name: 'linkWalletInstructionFees',
       );
 
@@ -1493,13 +1490,14 @@ class LocalizedStrings {
       );
 
   static String linkWalletReceiveTitle(String token) => Intl.message(
-        'Receive $token tokens from external wallet',
+        'Receive $token points from external wallet',
         name: 'linkWalletReceiveTitle',
         args: [token],
       );
 
   static String linkWalletReceiveHint(String token) => Intl.message(
-        'Transfer from your linked external wallet to your $token wallet',
+        // ignore: lines_longer_than_80_chars
+        'Transfer balance from your linked external wallet to your $token wallet',
         name: 'linkWalletReceiveHint',
         args: [token],
       );
@@ -1531,7 +1529,7 @@ class LocalizedStrings {
       );
 
   static String linkedWalletSendTitle(String token) => Intl.message(
-        'Transfer $token tokens to external wallet',
+        'Transfer $token points to external wallet',
         name: 'linkedWalletSendTitle',
         args: [token],
       );
@@ -1563,7 +1561,7 @@ class LocalizedStrings {
 
   //region Social Page
   static String get socialPageTitle => Intl.message(
-        'Social',
+        'Community',
         name: 'socialPageTitle',
       );
 
@@ -1621,7 +1619,7 @@ class LocalizedStrings {
       name: 'redeemVoucherInsufficientFunds');
 
   static String get outOfStockDescription =>
-      Intl.message('The vouchers in this offer are currently out of stock.',
+      Intl.message('The vouchers in this offer are currently sold out.',
           name: 'outOfStockDescription');
 
 //endregion Spend Page
@@ -1636,7 +1634,7 @@ class LocalizedStrings {
           name: 'realEstateListNoPurchases');
 
   static String get instalmentListChooseAnInstalment =>
-      Intl.message('Choose an instalment',
+      Intl.message('Choose an installment',
           name: 'instalmentListChooseAnInstalment');
 
   static String get installmentOverdue =>
@@ -1646,12 +1644,12 @@ class LocalizedStrings {
 
 // region Property Payment Page
   static String get propertyPaymentPageTitle => Intl.message(
-        'Pay your instalment',
+        'Pay your installment',
         name: 'propertyPaymentPageTitle',
       );
 
   static String get propertyPaymentPageSubDetails => Intl.message(
-        'Your can pay your instalment in full or partially',
+        'Your can pay your installment in full or partially',
         name: 'propertyPaymentPageSubDetails',
       );
 
@@ -1684,7 +1682,7 @@ class LocalizedStrings {
       );
 
   static String get propertyPaymentAmountExceedsInstalment => Intl.message(
-        'Amount can\'t exceed the total of the instalment',
+        'Amount can\'t exceed the total of the installment',
         name: 'propertyPaymentAmountExceedsInstalment',
       );
 
@@ -1697,12 +1695,12 @@ class LocalizedStrings {
       );
 
   static String get paymentAmountRequiredError => Intl.message(
-        'Transfer amount is required',
+        'Amount is required',
         name: 'paymentAmountRequiredError',
       );
 
   static String get paymentAmountInvalidError => Intl.message(
-        'Transfer amount is not valid',
+        'Amount is not valid',
         name: 'paymentAmountInvalidError',
       );
 
@@ -1803,7 +1801,7 @@ class LocalizedStrings {
 //region Warning Dialog
 
   static String get warningDialogLeavingPageTitle => Intl.message(
-        'Confirm action',
+        'Confirm',
         name: 'warningDialogLeavingPageTitle',
       );
 
@@ -1960,11 +1958,11 @@ class LocalizedStrings {
       Intl.message('New password*', name: 'changePasswordPagePasswordLabel');
 
   static String get changePasswordPageConfirmPasswordHint =>
-      Intl.message('Confirm new password',
+      Intl.message('Please confirm new password',
           name: 'changePasswordPageConfirmPasswordHint');
 
   static String get changePasswordPagePasswordHint =>
-      Intl.message('Enter new password',
+      Intl.message('Please enter new password',
           name: 'changePasswordPagePasswordHint');
 
 //endregion Change password
@@ -2005,12 +2003,12 @@ class LocalizedStrings {
       Intl.message('Enter email address', name: 'resetPasswordTitle');
 
   static String get resetPasswordSendLinkHint =>
-      Intl.message('We’ll send you link to reset your password',
+      Intl.message('We’ll send you a link to reset your password',
           name: 'resetPasswordSendLinkHint');
 
   static String get resetPasswordSentEmailHint => Intl.message(
       // ignore: lines_longer_than_80_chars
-      'Link has been sent, please check your email, if you didn’t receive it try to request it again',
+      'Link has been sent, please check your email, if you didn’t receive it try to request it again or check your spam folder',
       name: 'resetPasswordSentEmailHint');
 
   static String get resetPassword => Intl.message(
@@ -2056,7 +2054,7 @@ class LocalizedStrings {
       );
 
   static String get pinErrorIncorrectPassCode =>
-      Intl.message('Incorect passcode, please retry',
+      Intl.message('Incorrect passcode, please retry',
           name: 'pinErrorIncorrectPassCode');
 
   static String get pinShow => Intl.message('Show PIN', name: 'pinShow');
@@ -2117,14 +2115,14 @@ class LocalizedStrings {
 //region P2P Transaction Page
 
   static String receiveTokenPageTitle(String token) => Intl.message(
-        'Receive $token tokens',
+        'Receive $token points',
         name: 'receiveTokenPageTitle',
         args: [token],
       );
 
   static String get receiveTokenPageSubDetails => Intl.message(
         'Share this code with the sender, you\'ll '
-        'receive tokens quicker than you thought',
+        'receive points quicker than you thought',
         name: 'receiveTokenPageSubDetails',
       );
 
@@ -2219,16 +2217,16 @@ class LocalizedStrings {
       Intl.message('Offer Award', name: 'earnRuleRewardBoxTitle');
 
   static String earnRuleRewardBoxSubTitle(String token) => Intl.message(
-        'Earn $token tokens every time you complete the offer',
+        'Earn $token points every time you complete the offer',
         name: 'earnRuleRewardBoxSubTitle',
         args: [token],
       );
 
   static String get earnRuleCampaignMissionTitle =>
-      Intl.message('Offer mission', name: 'earnRuleCampaignMissionTitle');
+      Intl.message('Task mission', name: 'earnRuleCampaignMissionTitle');
 
   static String get earnRuleCampaignMissionSubtitle =>
-      Intl.message('Finish the tasks below and earn the offer award',
+      Intl.message('Finish the tasks below and earn the offer award!',
           name: 'earnRuleCampaignMissionSubtitle');
 
   static String get earnRuleConditionCompleted =>
@@ -2238,8 +2236,8 @@ class LocalizedStrings {
       Intl.message('Get started', name: 'earnRuleConditionGetStarted');
 
   static String earnRuleCompletionMessage(String token) => Intl.message(
-        'Congratulations! You have completed this offer! '
-        'Have a look at other offers to continue earning ${token}s',
+        // ignore: lines_longer_than_80_chars
+        'Congratulations! You have completed this task! Have a look at other offers to continue earning ${token}s',
         name: 'earnRuleCompletionMessage',
         args: [token],
       );
@@ -2253,7 +2251,7 @@ class LocalizedStrings {
       );
 
   static String get earnRuleDetailsEarnUponCompletion => Intl.message(
-        'Each time you complete this offer, you could earn ',
+        'Each time you complete this task, you could earn ',
         name: 'earnRuleDetailsEarnUponCompletion',
       );
 
@@ -2293,7 +2291,7 @@ class LocalizedStrings {
       );
 
   static String get earnRuleDetailsPreviousParticipationPart1 => Intl.message(
-        'You have participated ',
+        'You have successfully participated ',
         name: 'earnRuleDetailsPreviousParticipationPart1',
       );
 
@@ -2313,7 +2311,7 @@ class LocalizedStrings {
       );
 
   static String get earnRuleDetailsOfferUnavailableTitle =>
-      Intl.message('Offer unavailable',
+      Intl.message('Task unavailable',
           name: 'earnRuleDetailsOfferUnavailableTitle');
 
   static String get earnRuleDetailsViewOffersButton =>
@@ -2405,7 +2403,7 @@ class LocalizedStrings {
       );
 
   static String amountTokens(int amount, String token) =>
-      Intl.message(' $amount $token tokens ',
+      Intl.message(' $amount $token points ',
           name: 'amountTokens',
           args: [amount, token],
           desc: 'Amount of tokens',
@@ -2431,7 +2429,7 @@ class LocalizedStrings {
       );
 
   static String get bottomBarSocial => Intl.message(
-        'Social',
+        'Community',
         name: 'bottomBarSocial',
       );
 
@@ -2451,7 +2449,7 @@ class LocalizedStrings {
       );
 
   static String get maintenanceErrorMessage => Intl.message(
-        'The server is under maintenance. Please try again later.',
+        'The system is under maintenance. Please try again later.',
         name: 'maintenanceErrorMessage',
       );
 
@@ -2520,7 +2518,7 @@ class LocalizedStrings {
       );
 
   static String amountTokensHolder(String amount, String token) =>
-      Intl.message('$amount $token tokens ',
+      Intl.message('$amount $token points ',
           name: 'amountTokensHolder',
           args: [amount, token],
           desc: 'Amount of tokens',
@@ -2566,12 +2564,12 @@ class LocalizedStrings {
           name: 'transferRequestAmountIsZeroError');
 
   static String get transferRequestNotEnoughTokensError => Intl.message(
-      'Sorry, you do not have enough tokens to complete this transaction.',
+      'Sorry, you do not have enough points to complete this transaction.',
       name: 'transferRequestNotEnoughTokensError');
 
   static String get transferRequestInvalidStateError => Intl.message(
       'Something\'s wrong… '
-      'The request seems to be already completed or cancelled.',
+      'The request seems to be already completed or canceled.',
       name: 'transferRequestInvalidStateError');
 
   static String get transferRequestRejectButton => Intl.message(
@@ -2650,7 +2648,7 @@ class LocalizedStrings {
       );
 
   static String get transferRequestStatusCardStatusCancelled => Intl.message(
-        'Cancelled',
+        'Canceled',
         name: 'transferRequestStatusCardStatusCancelled',
       );
 
@@ -2770,7 +2768,7 @@ class LocalizedStrings {
       Intl.message('Scanned Info', name: 'scannedInfoDialogTitle');
 
   static String get scannedInfoDialogErrorMessage =>
-      Intl.message('This QR code is currently unsupported',
+      Intl.message('This QR code type is currently unsupported',
           name: 'scannedInfoDialogErrorMessage');
 
   static String get scannedInfoDialogPositiveButton =>
@@ -2843,8 +2841,7 @@ class LocalizedStrings {
           name: 'personalDetailsDeleteAccountButton');
 
   static String get personalDetailsGenericError => Intl.message(
-      'We are unable to get your personal details right now.'
-      'Please try again.',
+      'We are unable to get your personal details right now. Please try again.',
       name: 'personalDetailsGenericError');
 
 // endregion Personal Detail Page
@@ -2988,8 +2985,8 @@ class LocalizedStrings {
       Intl.message('Update required', name: 'mandatoryAppUpgradePageTitle');
 
   static String get mandatoryAppUpgradePageContent => Intl.message(
-      'There is a new version of the app available to download. '
-      'Please update in order to continue.',
+      // ignore: lines_longer_than_80_chars
+      'A new version of the app available to download. Please update in order to continue.',
       name: 'mandatoryAppUpgradePageContent');
 
   static String get mandatoryAppUpgradePageButton =>
@@ -3133,7 +3130,7 @@ class LocalizedStrings {
       );
 
   static String notEnoughTokensError(String token) => Intl.message(
-        'Sorry, you do not have sufficient $token tokens for this operation',
+        'Sorry, you do not have sufficient $token points for this activity',
         name: 'notEnoughTokensError',
         args: [token],
       );
@@ -3145,8 +3142,7 @@ class LocalizedStrings {
 
   static String get paymentIsNotInACorrectStatusToBeUpdatedError =>
       Intl.message(
-        'Something\'s wrong… '
-        'The request seems to be already completed or cancelled.',
+        'The request seems to be already completed or canceled.',
         name: 'paymentIsNotInACorrectStatusToBeUpdatedError',
       );
 
@@ -3156,7 +3152,7 @@ class LocalizedStrings {
       );
 
   static String get phoneAlreadyExistsError => Intl.message(
-        'This phone is already verified',
+        'This phone number is already verified',
         name: 'phoneAlreadyExistsError',
       );
 
@@ -3166,9 +3162,8 @@ class LocalizedStrings {
       );
 
   static String get referralAlreadyConfirmedError => Intl.message(
-        'You snooze, you lose… It appears this '
-        'person has already been referred by another '
-        'user. Please refer someone else.',
+        // ignore: lines_longer_than_80_chars
+        'It appears this person has already been referred by another user. Why don\'t you try someone else?',
         name: 'referralAlreadyConfirmedError',
       );
 
@@ -3188,12 +3183,12 @@ class LocalizedStrings {
       );
 
   static String get senderCustomerNotFoundError => Intl.message(
-        'Sorry, we couldn\'t find this account. Transfer cancelled',
+        'Sorry, we couldn\'t find this account. Transfer canceled',
         name: 'senderCustomerNotFoundError',
       );
 
   static String get targetCustomerNotFoundError => Intl.message(
-        'Sorry, we couldn\'t find this account. Transfer cancelled',
+        'Sorry, we couldn\'t find this account. Transfer canceled',
         name: 'targetCustomerNotFoundError',
       );
 
@@ -3249,7 +3244,7 @@ class LocalizedStrings {
 
   static String get friendReferralSuccessDetails => Intl.message(
         // ignore: lines_longer_than_80_chars
-        'Great! Your referral has been submitted, we will notify you when the tokens are added to your wallet.',
+        'Great! Your referral has been submitted, we will notify you when the points are added to your wallet.',
         name: 'friendReferralSuccessDetails',
       );
 
@@ -3326,7 +3321,7 @@ class LocalizedStrings {
       );
 
   static String get emailBody => Intl.message(
-        'Body',
+        'Content',
         name: 'emailBody',
       );
 
